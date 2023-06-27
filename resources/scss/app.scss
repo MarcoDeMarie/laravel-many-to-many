@@ -1,0 +1,35 @@
+@import '~bootstrap/scss/bootstrap';
+
+.main-wrapper{
+    height: calc(100vh - 60px);
+
+}
+
+header{
+    height: 60px;
+}
+
+main{
+    width: 100vw;
+}
+
+
+
+aside{
+    color: white;
+    height: 100%;
+    width: 300px;
+    nav{
+        ul{
+            list-style: none;
+            li{
+                margin-bottom: 8px;
+                a{
+                    color: white;
+                    text-decoration: none;
+                    font-size: .9rem;
+                }
+            }
+        }
+    }
+}
