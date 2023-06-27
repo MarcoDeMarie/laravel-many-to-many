@@ -19,7 +19,7 @@ class TechnologyTableSeeder extends Seeder
         $data = ['HTML', 'CSS', 'JavaScrip', 'PHP', 'C++'];
 
         foreach($data as $technology){
-            $new_technology = New Tchnology();
+            $new_technology = New Technology();
             $new_technology->name = $technology;
             $new_technology->slug = Str::slug($technology, '-');
             $new_technology->save();

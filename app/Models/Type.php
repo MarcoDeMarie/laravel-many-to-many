@@ -10,6 +10,6 @@ class Type extends Model
     use HasFactory;
 
     public function posts(){
-        return $this->hasMany(Posts::class);
+        return $this->belongsToMany(Posts::class);
     }
 }

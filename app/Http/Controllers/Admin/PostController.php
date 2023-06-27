@@ -8,6 +8,7 @@ use App\Models\Post;
 use App\Http\Requests\PostRequest;
 use Illuminate\Support\Facades\Storage;
 use App\Models\Type;
+use App\Models\Technology;
 
 class PostController extends Controller
 {
@@ -33,8 +34,9 @@ class PostController extends Controller
     {
 
         $types = Type::all();
+        $technologies = Technology::all();
 
-        return view('admin.posts.create', compact('types'));
+        return view('admin.posts.create', compact('types', 'technologies'));
     }
 
     /**
@@ -47,6 +49,7 @@ class PostController extends Controller
     {
 
         $form_data = $request->all();
+        dd($form_data);
         $form_data['slug'] = Post::generateSlug($form_data['title']);
         $form_data['date'] = date('Y-m-d');
 

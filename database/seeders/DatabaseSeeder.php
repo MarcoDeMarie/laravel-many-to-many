@@ -17,7 +17,9 @@ class DatabaseSeeder extends Seeder
         $this->call([
             TypeTableSeeder::class,
             TechnologyTableSeeder::class,
-            PostsTableSeeder::class, //non lanciare in produzione
+            PostsTableSeeder::class,
+
+             //non lanciare in produzione
         ]);
     }
 }

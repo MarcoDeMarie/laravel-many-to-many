@@ -14,6 +14,7 @@ class Post extends Model
 
         'title',
         'type_id',
+        'technology_id',
         'slug',
         'text',
         'date',
@@ -25,6 +26,10 @@ class Post extends Model
 
     public function type(){
         return $this->belongsTo(Type::class);
+    }
+
+    public function technology(){
+        return $this->belongsToMany(technology::class);
     }
 
 

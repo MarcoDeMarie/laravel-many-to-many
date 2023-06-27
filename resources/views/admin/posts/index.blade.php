@@ -25,6 +25,7 @@
             <th scope="col">#ID</th>
             <th scope="col">Titolo</th>
             <th scope="col">Tipo</th>
+            <th scope="col">Tecnologia</th>
             <th scope="col">Data</th>
             <th scope="col">Azioni</th>
         </tr>
@@ -36,6 +37,18 @@
                 <td>{{ $post->id }}</td>
                 <td>{{ $post->title }}</td>
                 <td><span class="badge bg-info text-dark">{{ $post->type->name }}</span></td>
+
+                <td>
+                    @forelse ($post->technology as $technology )
+
+                    <span class="badge bg-primary">{{ $technology->name }}</span>
+
+                    @empty
+
+                    <span>empty</span>
+
+                    @endforelse
+                </td>
                 @php
 
                     $date = date_create($post->date);

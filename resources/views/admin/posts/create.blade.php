@@ -47,11 +47,31 @@
                 <option value="" selected>Seleziona il tipo</option>
 
                 @foreach ( $types as $type )
-                <option value="{{ $type->name }}">{{ $type->name }}</option>
+                <option value="{{ $type->id }}">{{ $type->name }}</option>
                 @endforeach
 
             </select>
 
+        </div>
+
+        <div class="mb-3">
+            <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+
+                @foreach ($technologies as $technology )
+
+                <input
+                    type="checkbox"
+                    class="btn-check"
+                    id="technology{{ $loop->iteration }}"
+                    autocomplete="off"
+                    value="{{ $technology->id }}"
+                    name="technologies[]"
+                >
+                <label class="btn btn-outline-primary" for="technology{{ $loop->iteration }}">{{ $technology->name }}</label>
+
+                @endforeach
+
+            </div>
         </div>
 
 

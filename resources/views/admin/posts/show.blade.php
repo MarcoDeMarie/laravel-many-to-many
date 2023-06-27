@@ -7,7 +7,15 @@
     <h2>{{ $post->title }}</h2>
     <p>{{ $post->date }}</p>
     <div>
-        <span class="badge bg-info text-dark">{{ $post->type?->name }}</span>
+        Tipo:<span class="badge bg-info text-dark">{{ $post->type?->name }}</span>
+    </div>
+    <div>
+        <span>Tecnologie:</span>
+        @forelse ($post->technology as $technology )
+            <span class="badge bg-info text-dark">{{ $technology->name }}</span>
+        @empty
+            <span>Empty</span>
+        @endforelse
     </div>
     <p>Tempo di lettura: {{ $post->reading_time }} min</p>
     <p>{{ $post->text }}</p>
