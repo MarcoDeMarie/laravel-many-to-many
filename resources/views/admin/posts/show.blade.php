@@ -11,7 +11,7 @@
     </div>
     <div>
         <span>Tecnologie:</span>
-        @forelse ($post->technology as $technology )
+        @forelse ($post->technologies as $technology )
             <span class="badge bg-info text-dark">{{ $technology->name }}</span>
         @empty
             <span>Empty</span>

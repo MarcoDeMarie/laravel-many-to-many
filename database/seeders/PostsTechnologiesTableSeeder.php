@@ -17,11 +17,10 @@ class PostsTechnologiesTableSeeder extends Seeder
      */
     public function run()
     {
-        for($i = 0; $i < 3; $i++){
+        for($i = 0; $i < 5; $i++){
 
             $post = Post::inRandomOrder()->first();
             $technology_id = Technology::inRandomOrder()->first();
-
             $post->technologies()->attach($technology_id);
 
         }

@@ -39,7 +39,7 @@
                 <td><span class="badge bg-info text-dark">{{ $post->type->name }}</span></td>
 
                 <td>
-                    @forelse ($post->technology as $technology )
+                    @forelse ($post->technologies as $technology )
 
                     <span class="badge bg-primary">{{ $technology->name }}</span>
 

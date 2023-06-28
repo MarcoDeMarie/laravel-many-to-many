@@ -49,7 +49,7 @@ class PostController extends Controller
     {
 
         $form_data = $request->all();
-        dd($form_data);
+
         $form_data['slug'] = Post::generateSlug($form_data['title']);
         $form_data['date'] = date('Y-m-d');
 
